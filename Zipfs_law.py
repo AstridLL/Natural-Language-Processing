@@ -2,6 +2,8 @@
 (this is called a docstring)
 A short python script on Zipf's Law
 
+test
+
 Pick any book from (I will use Harry Potter):
 http://www.glozman.com/textpages.html
 """
