@@ -16,3 +16,4 @@ print(string)
 import tensorflow as tf
 
 # lidt ekstra code 
+# lidt flere 
