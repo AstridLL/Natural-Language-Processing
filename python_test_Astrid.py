@@ -1,4 +1,6 @@
+### Natural Language Processing (Sep. 2020)
 ## Basic python test 
+# Astrid Lang Ledager
 
 #%%
 # Task 1: Adding machine
@@ -25,6 +27,7 @@ def countingcharacters(s, i):
 countingcharacters("INTERDISCIPLINARY", "n")
 # returns 2
 # WORKS 
+
 # %%
 # Task 3: Function isEven
 # 1) test if a given number is even or odd, 
@@ -58,28 +61,53 @@ numberlist = [10,45,0,-4,99,43,2]
 CountEvenItems(numberlist)
 # OR
 CountEvenItems(numberlist=[10,45,0,-4,99,43,2])
+
 # Returns 4 out of 7 numbers in the list are even
 # WORKS
 
 #%%
 # Task 4: Search in list
 # Give the largest value out of a list of floating-point numbers
+floatnos  = [1.2, 7.8, 5.67, 9.0, 5.23, 54.54, 33.5]
 def LargestValueItem(floatnumberlist):
-    Largestvaluelist = []
-    for number in floatnumberlist:
-        currentnumber = number
-        if currentnumber >= sum(Largestvaluelist):
-            Largestvaluelist.append(currentnumber)
+    #return max(floatnumberlist)
+    print("The largest value of the input list is %.2f" % max(floatnumberlist))
+
+# Returns 54.54
+# WORKS 
 
 #%% 
 # Task 5: String and loops 
+# Print complete word on first line, and remove the last character on each
+# successive line, ending with a single (the first) character.
 def RemoveCharctersFunc(word):
-    length = len(word)
+    length = len(word) -1
     print(word)
-    print()
+    for letters in word:
+        if length > 0:
+            print(word[0:length])
+            length = length -1
+        # else:
+        #     print(word)
+# Returns   test
+#           tes
+#           te
+#           t
+# WORKS 
 
 #%%
 # Task 6: Get dict keys 
-def GetDictKeys(dictionary):
+# Write a function that takes as it's single input any dictionary
+# The function should return the keys of the input dictionary, in a list.
+# Dictoniaries have key:value pairs 
+dictionary1 = {"1":"one", "2":"two", "3":"three", "4":"four"}
+def GetDictKeys(anydictionary):
+    return anydictionary.keys()
+    #or
+    keyslist = anydictionary.keys()
+    print(keyslist)
+
+# Returns dict_keys(['1', '2', '3', '4'])
+# WORKS
 
 #%%

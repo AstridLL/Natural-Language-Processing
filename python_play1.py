@@ -51,3 +51,13 @@ for name in names:
     namefunction(name)
 
 # %%
+
+def mineditdist(source, target):
+    n = len(source)
+    m = len(target)
+    
+    for row i from one to n:
+        
+# %%
+´
+# %%
