@@ -5,7 +5,6 @@ import pprint
 
 my_first_pat = '(\w+)@(\w+).edu'
 
-
 def process_file(name, f):
     """
     TODO

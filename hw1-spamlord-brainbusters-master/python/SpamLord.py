@@ -4,7 +4,34 @@ import re
 import pprint
 
 my_first_pat = '(\w+)@(\w+).edu'
-
+epatterns = [my_first_pat]
+epatterns.append('([A-Za-z]+)@([A-Za-z]+)\.edu')
+epatterns.append('\s*([A-Za-z]+)\s*@\s*([A-Za-z]+)\s*\.edu\s*')
+epatterns.append('([A-Za-z\.]+)@([A-Za-z\.]+)\.edu')
+epatterns.append('([A-Za-z\.]+)\s{1,5}@\s{1,5}([A-Za-z\.]+)\.edu')
+epatterns.append('(\s[A-Za-z\.]+)\s*@\s*([A-Za-z\.]+)\.edu')
+epatterns.append('([A-Za-z\.]+)\s*at\s*([A-Za-z\.]+)\.edu')
+epatterns.append('([A-Za-z]+)\s*at\s*([A-Za-z]+)\.edu')
+epatterns.append('([.]+)\sat\s([.]+)\.edu')
+epatterns.append('([.]+)@([.]+)\.edu')
+epatterns.append('([A-Za-z\.]+)@([A-Za-z\.]+)\.edu')
+epatterns.append('([A-Za-z]+)\s*@\s*([A-Za-z]+)\.edu')
+epatterns.append('([A-Za-z\.]+)\s*@\s*([A-Za-z\.]+)\.edu')
+epatterns.append('([A-Za-z\.]+)\s*@\s*([A-Za-z\.]+)\.[A-Za-z\.]{2,6}')
+epatterns.append('([A-Za-z\.]+)\s*@\s*([A-Za-z\.]+)\s*\.\s*edu')
+epatterns.append('([A-Za-z]+)@([A-Za-z]+)\s\.\sedu')
+epatterns.append('([A-Za-z\.]+)@([A-Za-z\.]+)\.[A-Za-z\.]')
+epatterns.append('(\S+)@(\S+)\.edu')
+epatterns.append('(\S+)\s@\s(\S+)\.[A-Za-z]')
+epatterns.append('(\S+)@(\S+)\.[A-Za-z]')
+epatterns.append('(\S+)\sat\s(\S+)\s\.\s[A-Za-z]')
+epatterns.append('(\S+)\sat\s(\S+)\s\dot\s[A-Za-z]')
+epatterns.append('(\S+)\sAT\s(\S+)\s\.\s[A-Za-z]')
+epatterns.append('(\S+)\sAT\s(\S+)\s\DOT\s[A-Za-z]')
+epatterns.append('\s*([A-Za-z\.]+)\s*@\s*([A-Za-z\.]+)\s*\.\s*[A-Za-z\.]')
+epatterns.append('\s*([A-Za-z\.]+)\s*@\s*([A-Za-z\.]+)\s*\.\s*[A-Za-z\.]')
+epatterns.append('\s*([\S+]+)\s*@\s*([\S+]+)\s*\.\s*[A-Za-z]\s*')
+epatterns.append('\s*([\S+]+)\s*@\s*([\S+]+)\s*\.\s*[\S+]\s*')
 
 def process_file(name, f):
     """
